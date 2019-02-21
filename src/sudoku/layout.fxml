@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.layout.Pane?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="650.0" minWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sudoku.Controller">
+   <children>
+      <BorderPane layoutX="10.0" layoutY="10.0" minWidth="500.0" prefWidth="500.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <bottom>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnStart" mnemonicParsing="false" onMouseClicked="#buttonStartPressed" text="START">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnStop" mnemonicParsing="false" onMouseClicked="#buttonStopPressed" text="STOP">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label fx:id="labelTimer" text="Label">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Label>
+                  <RadioButton fx:id="radioEasy" mnemonicParsing="false" text="Easy">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="radioMedium" mnemonicParsing="false" text="Medium">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="radioHard" mnemonicParsing="false" text="Hard">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <GridPane BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="button_one" fx:id="button_zero" mnemonicParsing="false" onMouseClicked="#buttonZeroPressed" prefHeight="50.0" prefWidth="50.0" text="0" />
+                  <Button id="button_one" fx:id="button_two" mnemonicParsing="false" onMouseClicked="#buttonTwoPressed" prefHeight="50.0" prefWidth="50.0" text="2" GridPane.columnIndex="2" />
+                  <Button id="button_one" fx:id="button_three" mnemonicParsing="false" onMouseClicked="#buttonThreePressed" prefHeight="50.0" prefWidth="50.0" text="3" GridPane.columnIndex="3" />
+                  <Button fx:id="button_one" mnemonicParsing="false" onMouseClicked="#buttonOnePressed" prefHeight="50.0" prefWidth="50.0" text="1" GridPane.columnIndex="1" />
+                  <Button id="button_one" fx:id="button_four" mnemonicParsing="false" onMouseClicked="#buttonFourPressed" prefHeight="50.0" prefWidth="50.0" text="4" GridPane.rowIndex="1" />
+                  <Button id="button_one" fx:id="button_five" mnemonicParsing="false" onMouseClicked="#buttonFivePressed" prefHeight="50.0" prefWidth="50.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button id="button_one" fx:id="button_six" mnemonicParsing="false" onMouseClicked="#buttonSixPressed" prefHeight="50.0" prefWidth="50.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button id="button_one" fx:id="button_seven" mnemonicParsing="false" onMouseClicked="#buttonSevenPressed" prefHeight="50.0" prefWidth="50.0" text="7" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button id="button_one" fx:id="button_eight" mnemonicParsing="false" onMouseClicked="#buttonEightPressed" prefHeight="50.0" prefWidth="50.0" text="8" GridPane.rowIndex="2" />
+                  <Button id="button_one" fx:id="button_nine" mnemonicParsing="false" onMouseClicked="#buttonNinePressed" prefHeight="50.0" prefWidth="50.0" text="9" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button id="button_one" fx:id="button_a" mnemonicParsing="false" onMouseClicked="#buttonAPressed" prefHeight="50.0" prefWidth="50.0" text="A" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button id="button_one" fx:id="button_b" mnemonicParsing="false" onMouseClicked="#buttonBPressed" prefHeight="50.0" prefWidth="50.0" text="B" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Button id="button_one" fx:id="button_c" mnemonicParsing="false" onMouseClicked="#buttonCPressed" prefHeight="50.0" prefWidth="50.0" text="C" GridPane.rowIndex="3" />
+                  <Button id="button_one" fx:id="button_d" mnemonicParsing="false" onMouseClicked="#buttonDPressed" prefHeight="50.0" prefWidth="50.0" text="D" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button id="button_one" fx:id="button_e" mnemonicParsing="false" onMouseClicked="#buttonEPressed" prefHeight="50.0" prefWidth="50.0" text="E" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button id="button_one" fx:id="button_f" mnemonicParsing="false" onMouseClicked="#buttonFPressed" prefHeight="50.0" prefWidth="50.0" text="F" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </GridPane>
+         </center>
+         <top>
+            <Canvas fx:id="canvas" height="480.0" onMouseClicked="#canvasMouseClicked" width="500.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets right="20.0" />
+               </BorderPane.margin></Canvas>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
